@@ -6,5 +6,5 @@ Sometimes we need to develop customised UI for apps. This could be for the purpo
 
 Preview: 
 
-![Alt text](https://github.com/RowlandOti/CustomViewsExample/blob/master/documentation/illustartion.gif?raw=true "CustomViewsExample")
+![Alt text](https://github.com/RowlandOti/CustomViewsExample/blob/master/documentation/illustration.gif?raw=true "CustomViewsExample")
 
