@@ -9,8 +9,8 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.rowland.customviews.R;
@@ -42,11 +42,13 @@ public class LoadingView extends View {
 
     public LoadingView(Context context) {
         super(context);
+        printLogInfo("Programmatic constructor");
         init();
     }
 
-    public LoadingView(Context context, @Nullable AttributeSet attrs) {
+    public LoadingView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        printLogInfo("XML constructor");
         init();
     }
 
@@ -62,6 +64,11 @@ public class LoadingView extends View {
         cfgPaint();
         cfgAnimation(100000);
     }
+
+    private void printLogInfo(String methodName) {
+        Log.i("TAG", methodName + " called, measured size: (" + getMeasuredWidth() + ", " + getMeasuredHeight() + ")");
+    }
+
 
     private void cfgPaint() {
         // Arc Paint
@@ -91,8 +98,28 @@ public class LoadingView extends View {
     }
 
     @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+        printLogInfo("onFinishInflate");
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        printLogInfo("onAttachedToWindow");
+    }
+
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        printLogInfo("onLayout");
+    }
+
+    @Override
     public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        printLogInfo("onMeasure");
 
         int xPad = getPaddingLeft() + getPaddingRight();
         int yPad = getPaddingTop() + getPaddingBottom();
@@ -109,6 +136,7 @@ public class LoadingView extends View {
     @Override
     public void onSizeChanged(int newWidth, int newHeight, int oldWidth, int oldHeight) {
         super.onSizeChanged(newWidth, newHeight, oldWidth, oldHeight);
+        printLogInfo("onSizeChanged");
 
         float xPad = getPaddingLeft() + getPaddingRight();
         float yPad = getPaddingTop() + getPaddingBottom();
@@ -132,6 +160,7 @@ public class LoadingView extends View {
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        printLogInfo("onDraw");
         onDrawCircle(canvas);
         onDrawArcs(canvas);
         onDrawBitmap(canvas);
