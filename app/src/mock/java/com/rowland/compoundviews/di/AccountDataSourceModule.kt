@@ -10,7 +10,7 @@ import dagger.Provides
  */
 
 @Module
-class DataSourceModule {
+class AccountDataSourceModule {
     @Provides
     fun providesMockAccountDataSource(): IAccountDataSource = MockAccountDataSource()
 }

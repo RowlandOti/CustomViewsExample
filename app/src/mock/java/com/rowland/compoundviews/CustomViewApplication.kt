@@ -3,7 +3,7 @@ package com.rowland.compoundviews
 import android.app.Application
 import com.rowland.compoundviews.di.AppComponent
 import com.rowland.compoundviews.di.DaggerAppComponent
-import com.rowland.compoundviews.di.DataSourceModule
+import com.rowland.compoundviews.di.AccountDataSourceModule
 import com.rowland.compoundviews.di.PresenterModule
 
 /**
@@ -15,7 +15,7 @@ class CustomViewApplication : Application() {
         DaggerAppComponent
                 .builder()
                 .presenterModule(PresenterModule())
-                .dataSourceModule(DataSourceModule())
+                .accountDataSourceModule(AccountDataSourceModule())
                 .build()
     }
 }

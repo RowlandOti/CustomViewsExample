@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/image_activated"
+        android:id="@+id/image_activated_badge"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@android:drawable/arrow_up_float"

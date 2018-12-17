@@ -7,18 +7,13 @@
     android:orientation="horizontal"
     tools:context="com.rowland.customviews.MainActivity">
 
-    <!--<com.rowland.customviews.CustomView
-        android:id="@+id/top_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2" />-->
-
-    <com.rowland.loading.views.LoadingView
+    <com.rowland.compoundviews.AccountView
         android:id="@+id/bottom_view"
         android:padding="20dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:text="Hello World!" />
+
 
 </LinearLayout>

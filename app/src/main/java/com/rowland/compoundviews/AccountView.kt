@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
 import com.rowland.compoundviews.contract.IAccountViewContract
-import com.rowland.customviews.R
+
 import kotlinx.android.synthetic.main.view_account.view.*
 
 /**
@@ -39,17 +39,17 @@ class AccountView(context: Context, attrs: AttributeSet) : LinearLayout(context,
     }
 
     override fun showActivationMissingBadge() {
-        image_activated.visibility = View.VISIBLE
-        image_activated.setImageResource(android.R.drawable.radiobutton_off_background)
+        image_activated_badge.visibility = View.VISIBLE
+        image_activated_badge.setImageResource(android.R.drawable.radiobutton_off_background)
     }
 
     override fun showActivationPendingBadge() {
-        image_activated.visibility = View.VISIBLE
-        image_activated.setImageResource(android.R.drawable.radiobutton_on_background)
+        image_activated_badge.visibility = View.VISIBLE
+        image_activated_badge.setImageResource(android.R.drawable.radiobutton_on_background)
     }
 
     override fun hideBadge() {
-        image_activated.visibility = View.GONE
+        image_activated_badge.visibility = View.GONE
     }
 
     override fun onAttachedToWindow() {
