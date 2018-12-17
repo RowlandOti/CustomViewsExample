@@ -1,6 +1,6 @@
 package com.rowland.compoundviews.contract
 
-import android.arch.lifecycle.Lifecycle
+
 
 
 /**
