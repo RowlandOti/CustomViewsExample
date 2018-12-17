@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.rowland.customviews.MainActivity">
+    tools:context="com.rowland.compoundviews.ui.MainActivity">
 
     <com.rowland.compoundviews.AccountView
         android:id="@+id/bottom_view"
