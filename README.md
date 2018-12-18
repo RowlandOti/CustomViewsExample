@@ -7,7 +7,7 @@
  - client requirements 
  - performance improvement 
  - providing a custom experience to the user. 
- - aplying animations
+ - applying animations
 
 
 Preview: 
